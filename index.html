@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#173f35">
+  <meta name="description" content="Encuentra los gatos semicamusflados por un enorme barrio ilustrado.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>MichiMapa · Callejeros Ocultos</title>
+</head>
+<body>
+  <main id="game" aria-label="Mapa del juego">
+    <canvas id="map"></canvas>
+    <header class="hud">
+      <div class="brand"><span>MICHI</span>MAPA</div>
+      <div class="stats">
+        <div><small>GATITOS</small><strong id="score">0 / 24</strong></div>
+        <div><small>TIEMPO</small><strong id="timer">5:00</strong></div>
+        <div><small>VIDAS</small><strong id="lives" aria-label="3 vidas">♥ ♥ ♥</strong></div>
+      </div>
+    </header>
+    <button id="helpBtn" class="round-button" aria-label="Cómo jugar">?</button>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <section id="intro" class="modal visible" aria-labelledby="intro-title">
+      <div class="card">
+        <p class="eyebrow">UN BARRIO · 24 GATOS · 5 MINUTOS</p>
+        <h1 id="intro-title">MichiMapa</h1>
+        <p class="subtitle">Callejeros Ocultos</p>
+        <div class="cat-mark" aria-hidden="true">ฅ^•ﻌ•^ฅ</div>
+        <p>Recorre el barrio deslizando un dedo. Los gatitos están semicamusflados: toca cada uno cuando lo encuentres.</p>
+        <p class="warning">Un toque equivocado cuesta una vida.</p>
+        <button id="startBtn" class="primary">Empezar la búsqueda</button>
+      </div>
+    </section>
+    <section id="result" class="modal" aria-labelledby="result-title">
+      <div class="card">
+        <p class="eyebrow" id="result-kicker">FIN DE LA PARTIDA</p>
+        <h2 id="result-title">¡Buen ojo!</h2>
+        <div class="result-number" id="result-score">18<span>/24</span></div>
+        <p id="result-text">Has encontrado un buen montón de bigotes.</p>
+        <button id="restartBtn" class="primary">Jugar otra vez</button>
+      </div>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
+
