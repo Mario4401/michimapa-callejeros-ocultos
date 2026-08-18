@@ -13,6 +13,7 @@ canvas.dragging { cursor: grabbing; }
 .stats div:first-child { border: 0; }
 .stats small { display: block; color: #597168; font-size: 8px; font-weight: 800; letter-spacing: .13em; }
 .stats strong { display: block; margin-top: 1px; color: #173f35; font-size: 15px; font-variant-numeric: tabular-nums; }
+.mission { position: fixed; z-index: 3; top: max(76px, calc(env(safe-area-inset-top) + 64px)); left: 50%; transform: translateX(-50%); max-width: calc(100% - 32px); padding: 7px 13px; border-radius: 20px; background: #173f35e8; color: #fff9e9; font-size: 11px; font-weight: 800; letter-spacing: .02em; text-align: center; white-space: nowrap; box-shadow: 0 4px 12px #173f3533; }
 #lives { color: #d95d56; letter-spacing: 1px; white-space: nowrap; }
 .round-button { position: fixed; z-index: 4; right: 16px; bottom: max(16px, env(safe-area-inset-bottom)); width: 44px; height: 44px; border: 0; border-radius: 50%; background: #173f35; color: white; font-weight: 900; font-size: 20px; box-shadow: 0 4px 15px #173f3544; }
 #toast { position: fixed; z-index: 5; left: 50%; bottom: max(75px, calc(env(safe-area-inset-bottom) + 65px)); transform: translate(-50%, 20px); opacity: 0; padding: 10px 16px; border-radius: 30px; background: #173f35; color: white; font-size: 13px; font-weight: 700; pointer-events: none; transition: .25s; white-space: nowrap; }
@@ -22,6 +23,8 @@ canvas.dragging { cursor: grabbing; }
 .card { width: min(430px, 100%); padding: 32px 28px 28px; border: 1px solid #fff; border-radius: 28px; background: #fff9e9; box-shadow: 0 20px 70px #102c2766; text-align: center; }
 .eyebrow { margin: 0 0 12px; color: #c35d48; font-size: 10px; font-weight: 900; letter-spacing: .17em; }
 h1, h2 { margin: 0; font-family: Georgia, serif; font-size: clamp(42px, 11vw, 58px); line-height: .95; }
+.game-over-title { color: #d65f4c; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: clamp(48px, 14vw, 72px); letter-spacing: .04em; text-shadow: 3px 3px 0 #f0bb68, 6px 6px 0 #173f35; transform: rotate(-2deg); }
+.game-over-title.win { color: #437d69; font-family: Georgia, serif; font-size: clamp(38px, 10vw, 54px); letter-spacing: 0; text-shadow: 2px 2px 0 #f0bb68; transform: none; }
 .subtitle { margin: 6px 0 20px; color: #6c7b62; font-family: Georgia, serif; font-size: 20px; font-style: italic; }
 .cat-mark { margin: 12px auto 20px; color: #d36e56; font-size: 30px; }
 .card > p:not(.eyebrow,.subtitle,.warning) { color: #42584f; line-height: 1.55; }
@@ -30,5 +33,5 @@ h1, h2 { margin: 0; font-family: Georgia, serif; font-size: clamp(42px, 11vw, 58
 .primary:active { transform: translateY(3px); box-shadow: 0 2px 0 #0c2a23; }
 .result-number { margin: 22px 0 10px; color: #d56651; font-family: Georgia, serif; font-size: 70px; font-weight: 700; line-height: 1; }
 .result-number span { color: #839188; font-size: 24px; }
-@media (max-width: 520px) { .brand { display: none; } .hud { justify-content: center; } .stats { width: 100%; max-width: 350px; } .stats div { flex: 1; min-width: 0; } }
+@media (max-width: 520px) { .brand { display: none; } .hud { justify-content: center; } .stats { width: 100%; max-width: 390px; } .stats div { flex: 1; min-width: 0; padding-inline: 5px; } .mission { top: max(72px, calc(env(safe-area-inset-top) + 60px)); } }
 
