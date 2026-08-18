@@ -1,7 +1,7 @@
 {
   "name": "MichiMapa: Callejeros Ocultos",
   "short_name": "MichiMapa",
-  "description": "Encuentra 24 gatitos escondidos por un enorme barrio ilustrado.",
+  "description": "Supera tres niveles encontrando gatos ocultos por un enorme barrio ilustrado.",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#d8cfad",
