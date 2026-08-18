@@ -1,4 +1,4 @@
-const CACHE='michimapa-v3';
+const CACHE='michimapa-v4';
 const FILES=['./','index.html','styles.css','game.js','manifest.webmanifest','icon.svg'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES))));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CACHE).map(k=>caches.delete(k))))));
